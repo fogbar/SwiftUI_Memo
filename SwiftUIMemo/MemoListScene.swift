@@ -22,6 +22,8 @@ struct MemoListScene: View {
             List(store.list) { memo in
                 VStack {
                     Text(memo.content)
+                    
+                    Text(memo.insertDate.description)
                 }
             }
                 //Swift에서는 method라고 부르지만 SwiftUI에서는 이렇게 .찍고 사용하는 Method 들을 modifier라고 부름
