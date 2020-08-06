@@ -21,10 +21,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         // Get the managed object context from the shared persistent container.
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        //MemoStore를 커스텀 공유 데이터로 등록
+        let store = MemoStore()
 
         // Create the SwiftUI view and set the context as the value for the managedObjectContext environment keyPath.
         // Add `@Environment(\.managedObjectContext)` in the views that will need the context.
-        let contentView = MemoListScene().environment(\.managedObjectContext, context)
+        
+        //위에 공유데이터로 등록한 MemoStore 인스턴스를 여기에서 MemoListScene에 등록 -> 이렇게 하면 MemoListScene과 이어지는 화면에 동일한 객체를 쉽게 입력 가능
+        let contentView = MemoListScene()
+            .environment(\.managedObjectContext, context)
+            .environmentObject(store)
 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
