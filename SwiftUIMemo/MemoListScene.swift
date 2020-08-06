@@ -20,7 +20,9 @@ struct MemoListScene: View {
             //구조체를 통해 배열에 저장되어 있는 memo가 구조체 내부의 memo 파라미터로 전달이 됨
             //List가 Swift의 테이블 뷰의 단일 column임
             List(store.list) { memo in
-                Text(memo.content)
+                VStack {
+                    Text(memo.content)
+                }
             }
                 //Swift에서는 method라고 부르지만 SwiftUI에서는 이렇게 .찍고 사용하는 Method 들을 modifier라고 부름
         .navigationBarTitle("내 메모")
