@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		432F517C24DED9E100AEE4FD /* DateFormatter+Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432F517B24DED9E100AEE4FD /* DateFormatter+Memo.swift */; };
 		432F517F24DEDE9300AEE4FD /* MemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432F517E24DEDE9300AEE4FD /* MemoCell.swift */; };
+		432F518224DEF42400AEE4FD /* ComposeScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432F518124DEF42400AEE4FD /* ComposeScene.swift */; };
 		4355F66C24DC033900661AB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4355F66B24DC033900661AB8 /* AppDelegate.swift */; };
 		4355F66E24DC033900661AB8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4355F66D24DC033900661AB8 /* SceneDelegate.swift */; };
 		4355F67124DC033900661AB8 /* SwiftUIMemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4355F66F24DC033900661AB8 /* SwiftUIMemo.xcdatamodeld */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		432F517B24DED9E100AEE4FD /* DateFormatter+Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Memo.swift"; sourceTree = "<group>"; };
 		432F517E24DEDE9300AEE4FD /* MemoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoCell.swift; sourceTree = "<group>"; };
+		432F518124DEF42400AEE4FD /* ComposeScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeScene.swift; sourceTree = "<group>"; };
 		4355F66824DC033900661AB8 /* SwiftUIMemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIMemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4355F66B24DC033900661AB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4355F66D24DC033900661AB8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,16 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		432F518024DEF3C100AEE4FD /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				432F517D24DEDE8100AEE4FD /* View */,
+				4355F67224DC033900661AB8 /* MemoListScene.swift */,
+				432F518124DEF42400AEE4FD /* ComposeScene.swift */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
 		4355F65F24DC033900661AB8 = {
 			isa = PBXGroup;
 			children = (
@@ -82,12 +94,11 @@
 		4355F66A24DC033900661AB8 /* SwiftUIMemo */ = {
 			isa = PBXGroup;
 			children = (
-				432F517D24DEDE8100AEE4FD /* View */,
+				432F518024DEF3C100AEE4FD /* Scene */,
 				432F517A24DED9C500AEE4FD /* Extension */,
 				4355F68224DC062100661AB8 /* Model */,
 				4355F66B24DC033900661AB8 /* AppDelegate.swift */,
 				4355F66D24DC033900661AB8 /* SceneDelegate.swift */,
-				4355F67224DC033900661AB8 /* MemoListScene.swift */,
 				4355F67424DC033B00661AB8 /* Assets.xcassets */,
 				4355F67924DC033B00661AB8 /* LaunchScreen.storyboard */,
 				4355F67C24DC033B00661AB8 /* Info.plist */,
@@ -193,6 +204,7 @@
 				4355F66E24DC033900661AB8 /* SceneDelegate.swift in Sources */,
 				4355F68624DC085800661AB8 /* Memo.swift in Sources */,
 				432F517F24DEDE9300AEE4FD /* MemoCell.swift in Sources */,
+				432F518224DEF42400AEE4FD /* ComposeScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
