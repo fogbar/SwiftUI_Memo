@@ -21,15 +21,9 @@ struct MemoListScene: View {
             //구조체를 통해 배열에 저장되어 있는 memo가 구조체 내부의 memo 파라미터로 전달이 됨
             //List가 Swift의 테이블 뷰의 단일 column임
             List(store.list) { memo in
-                VStack(alignment: .leading) {
-                    Text(memo.content)
-                        .font(.body)
-                        .lineLimit(1)
-                    
-                    Text("\(memo.insertDate, formatter: self.formatter)")
-                        .font(.caption)
-                        .foregroundColor(Color(UIColor.secondaryLabel))
-                }
+                //최대한 뷰 들을 잘게 쪼개는 것을 SwiftUI에서 권장함
+                //이렇게 Extract를 했다면 동일한 파일보다는 다른 파일로 옮기는 것이 더 나음
+                MemoCell(memo: memo)
             }
                 //Swift에서는 method라고 부르지만 SwiftUI에서는 이렇게 .찍고 사용하는 Method 들을 modifier라고 부름
         .navigationBarTitle("내 메모")
@@ -45,3 +39,5 @@ struct MemoListScene_Previews: PreviewProvider {
             .environmentObject(DateFormatter.memoDateFormatter)
     }
 }
+
+
